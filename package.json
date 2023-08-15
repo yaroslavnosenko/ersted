@@ -1,0 +1,15 @@
+{
+  "name": "ersted",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tailwindcss -i ./theme.css -o ./style.css --watch",
+    "build": "npx tailwindcss -i ./theme.css -o ./style.css --minify"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
