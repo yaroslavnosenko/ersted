@@ -23,8 +23,21 @@ function init_scripts()
 	wp_enqueue_script('theme');
 }
 
+function theme_setup()
+{
+	register_nav_menus(
+		array(
+			'primary'   => __('Primary Menu'),
+			'secondary' => __('Secondary Menu'),
+		)
+	);
+	add_theme_support('custom-logo');
+	add_theme_support('post-thumbnails');
+}
+
 add_action('wp_enqueue_scripts', 'init_styles');
 add_action('wp_enqueue_scripts', 'init_scripts');
+add_action('after_setup_theme', 'theme_setup');
 
 // Custom Fields
 
@@ -128,51 +141,9 @@ add_action('acf/include_fields', function () {
 	));
 
 	acf_add_local_field_group(array(
-		'key' => 'faq_setting_group',
-		'title' => 'FAQ Settings',
-		'fields' => array(
-			array(
-				'key' => 'faq_page_field',
-				'label' => 'FAQ Page',
-				'name' => 'faq_page',
-				'type' => 'post_object',
-				'post_type' => array(
-					0 => 'page',
-				),
-				'return_format' => 'object',
-			),
-			array(
-				'key' => 'faq_subtitle_field',
-				'label' => 'FAQ Subtitle',
-				'name' => 'faq_subtitle',
-				'type' => 'text',
-				'default_value' => 'Some FAQ',
-				'placeholder' => 'Some FAQ',
-			),
-		),
-		'location' => $front_page_location,
-	));
-
-	acf_add_local_field_group(array(
 		'key' => 'hero_settings_group',
 		'title' => 'Hero Settings',
 		'fields' => array(
-			array(
-				'key' => 'hero_title_field',
-				'label' => 'Hero Title',
-				'name' => 'hero_title',
-				'type' => 'text',
-				'default_value' => 'Hello',
-				'placeholder' => 'Hero Title',
-			),
-			array(
-				'key' => 'hero_subtitle_field',
-				'label' => 'Hero Subtitle',
-				'name' => 'hero_subtitle',
-				'type' => 'text',
-				'default_value' => 'World',
-				'placeholder' => 'Hero Subtitle',
-			),
 			array(
 				'key' => 'hero_action_field',
 				'label' => 'Hero Action',
@@ -195,7 +166,7 @@ add_action('acf/include_fields', function () {
 				'post_type' => array(
 					0 => 'page',
 				),
-				'allow_archives' => 1,
+				'allow_archives' => false,
 			),
 		),
 		'location' => $front_page_location,
@@ -243,7 +214,7 @@ add_action('acf/include_fields', function () {
 				'post_type' => array(
 					0 => 'page',
 				),
-				'allow_archives' => 1,
+				'allow_archives' => false,
 			),
 			array(
 				'key' => 'services_field',
@@ -256,7 +227,151 @@ add_action('acf/include_fields', function () {
 				'filters' => array(
 					0 => 'search',
 				),
+				'elements' => array(
+					0 => 'featured_image',
+				),
 				'return_format' => 'object',
+			),
+		),
+		'location' => $front_page_location,
+	));
+
+	acf_add_local_field_group(array(
+		'key' => 'faq_setting_group',
+		'title' => 'FAQ Settings',
+		'fields' => array(
+			array(
+				'key' => 'faq_page_field',
+				'label' => 'FAQ Page',
+				'name' => 'faq_page',
+				'type' => 'post_object',
+				'post_type' => array(
+					0 => 'page',
+				),
+				'return_format' => 'object',
+			),
+			array(
+				'key' => 'faq_subtitle_field',
+				'label' => 'FAQ Subtitle',
+				'name' => 'faq_subtitle',
+				'type' => 'text',
+				'default_value' => 'Some FAQ',
+				'placeholder' => 'Some FAQ',
+			),
+		),
+		'location' => $front_page_location,
+	));
+
+	acf_add_local_field_group(array(
+		'key' => 'form_setting_group',
+		'title' => 'Form Settings',
+		'fields' => array(
+			array(
+				'key' => 'form_title_field',
+				'label' => 'Form Title',
+				'name' => 'form_title',
+				'type' => 'text',
+				'default_value' => 'Form Title',
+				'placeholder' => 'Form Title',
+			),
+			array(
+				'key' => 'form_subtitle_field',
+				'label' => 'Form Subtitle',
+				'name' => 'form_subtitle',
+				'type' => 'text',
+				'default_value' => 'Form Subtitle',
+				'placeholder' => 'Form Subtitle',
+			),
+			array(
+				'key' => 'form_email_field',
+				'label' => 'Form Email Description',
+				'name' => 'form_email',
+				'type' => 'textarea',
+				'wrapper' => array(
+					'width' => '33',
+				),
+				'default_value' => 'Form Email Description',
+				'placeholder' => 'Form Email Description',
+			),
+			array(
+				'key' => 'form_address_field',
+				'label' => 'Form Address Description',
+				'name' => 'form_address',
+				'type' => 'textarea',
+				'wrapper' => array(
+					'width' => '33',
+				),
+				'default_value' => 'Form Address Description',
+				'placeholder' => 'Form Address Description',
+			),
+			array(
+				'key' => 'form_phone_field',
+				'label' => 'Form Phone Description',
+				'name' => 'form_phone',
+				'type' => 'textarea',
+				'wrapper' => array(
+					'width' => '33',
+				),
+				'default_value' => 'Form Subtitle',
+				'placeholder' => 'Form Subtitle',
+			),
+		),
+		'location' => $front_page_location,
+	));
+
+	acf_add_local_field_group(array(
+		'key' => 'faq_setting_group',
+		'title' => 'FAQ Settings',
+		'fields' => array(
+			array(
+				'key' => 'faq_page_field',
+				'label' => 'FAQ Page',
+				'name' => 'faq_page',
+				'type' => 'post_object',
+				'post_type' => array(
+					0 => 'page',
+				),
+				'return_format' => 'object',
+			),
+			array(
+				'key' => 'faq_subtitle_field',
+				'label' => 'FAQ Subtitle',
+				'name' => 'faq_subtitle',
+				'type' => 'text',
+				'default_value' => 'Some FAQ',
+				'placeholder' => 'Some FAQ',
+			),
+		),
+		'location' => $front_page_location,
+	));
+
+	acf_add_local_field_group(array(
+		'key' => 'error_setting_group',
+		'title' => 'Error Page Settings',
+		'fields' => array(
+			array(
+				'key' => 'error_title_field',
+				'label' => '404 Title',
+				'name' => 'error_title',
+				'type' => 'text',
+				'default_value' => '404 Title',
+				'placeholder' => '404 Title',
+			),
+			array(
+				'key' => 'error_subtitle_field',
+				'label' => '404 Subtitle',
+				'name' => 'error_subtitle',
+				'type' => 'text',
+				'default_value' => '404 Subtitle',
+				'placeholder' => '404 Subtitle',
+			),
+			array(
+				'key' => 'error_action_field',
+				'label' => '404 Action',
+				'name' => 'error_action',
+				'type' => 'text',
+				'default_value' => '404 Action',
+				'placeholder' => '404 Action',
 			),
 		),
 		'location' => $front_page_location,
