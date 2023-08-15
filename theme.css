@@ -5,3 +5,46 @@ Theme Name: Ersted
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.material-symbols-sharp {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+@media screen {
+  .menu-item-has-children > a::after {
+    content: " ↓";
+  }
+
+  .menu-item-has-children {
+    position: relative;
+  }
+
+  .menu-item-has-children ul {
+    position: absolute;
+    background: black;
+    color: white;
+    width: max-content;
+    display: none;
+    top: 2rem;
+  }
+
+  .menu-item-has-children ul li {
+    padding: 1rem;
+  }
+
+  .menu-item-has-children:hover ul {
+    display: block;
+  }
+}

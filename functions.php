@@ -35,9 +35,25 @@ function theme_setup()
 	add_theme_support('post-thumbnails');
 }
 
+function nav_menu_add_li_class($classes, $item, $args, $depth)
+{
+	if (isset($args->li_class)) {
+		$classes[] = $args->li_class;
+	}
+
+	if (isset($args->{"li_class_$depth"})) {
+		$classes[] = $args->{"li_class_$depth"};
+	}
+
+	return $classes;
+}
+
+
 add_action('wp_enqueue_scripts', 'init_styles');
 add_action('wp_enqueue_scripts', 'init_scripts');
 add_action('after_setup_theme', 'theme_setup');
+add_filter('nav_menu_css_class', 'nav_menu_add_li_class', 10, 4);
+
 
 // Custom Fields
 
