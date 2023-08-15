@@ -377,3 +377,27 @@ add_action('acf/include_fields', function () {
 		'location' => $front_page_location,
 	));
 });
+
+// Breadcrumbs
+
+function theme_breadcrumbs()
+{
+	global $post;
+	echo '<div class="opacity-70">';
+
+	if (!is_front_page()) {
+		echo '<a class="hover:underline" href="' . esc_url(home_url('/')) . '">' . __('Home') . '</a>';
+
+		$ancestors = get_post_ancestors($post);
+		$ancestors = array_reverse($ancestors);
+
+		foreach ($ancestors as $ancestor) {
+			echo '<span> / </span>';
+			echo '<a class="hover:underline"s href="' . esc_url(get_permalink($ancestor)) . '">' . get_the_title($ancestor) . '</a>';
+		}
+	}
+
+	echo '<span> / </span>';
+	echo '<span>' . get_the_title() . '</span>';
+	echo '</div>';
+}

@@ -1,11 +1,11 @@
 <footer>
-    <div class="py-12">
+    <div class="">
         <div class="container">
-            <div class="max-w-2xl text-center mx-auto mb-8">
-                <h2 class="text-4xl lg:text-5xl tracking-tight font-extrabold mb-8">
+            <div class="max-w-2xl text-center mx-auto">
+                <h2 class="text-4xl lg:text-5xl tracking-tight font-extrabold">
                     <? the_field('form_title_field') ?>
                 </h2>
-                <p class="opacity-60 text-xl mb-8">
+                <p class="opacity-60 text-xl">
                     <? the_field('form_subtitle_field') ?>
                 </p>
             </div>
@@ -67,7 +67,7 @@
         </div>
     </div>
 
-    <div class="bg-gray-50 py-12 mt-12">
+    <div class="bg-gray-50">
         <div class="container">
             <div class="flex gap-12">
                 <?php if (has_custom_logo()) { ?>
