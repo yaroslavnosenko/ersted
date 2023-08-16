@@ -121,7 +121,7 @@
                         </a>
                     </div>
                     <p class="py-4 md:py-8"><? the_field('address_field') ?></p>
-                    <p><? the_field('schedule_field') ?></p>
+                    <p class="opacity-70"><? the_field('schedule_field') ?></p>
                 </div>
             </div>
         </div>
