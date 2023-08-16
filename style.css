@@ -1187,6 +1187,10 @@ video {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1230,6 +1234,11 @@ video {
 .gap-x-6 {
   -moz-column-gap: 1.5rem;
        column-gap: 1.5rem;
+}
+
+.gap-x-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
 }
 
 .border-\[3px\] {
@@ -1319,6 +1328,11 @@ video {
   padding-bottom: 3rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -1332,6 +1346,16 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pt-12 {
@@ -1464,32 +1488,39 @@ video {
   -webkit-font-smoothing: antialiased;
 }
 
-@media screen {
-  .menu-item-has-children > a::after {
-    content: " ↓";
-  }
+.main-menu .menu-item-has-children > a::after {
+  content: " ↓";
+}
 
-  .menu-item-has-children {
-    position: relative;
-  }
+.main-menu .menu-item-has-children {
+  position: relative;
+}
 
-  .menu-item-has-children ul {
-    position: absolute;
-    background: black;
-    color: white;
-    width: -moz-max-content;
-    width: max-content;
-    display: none;
-    top: 2rem;
-  }
+.main-menu .menu-item-has-children ul {
+  position: absolute;
+  background: black;
+  color: white;
+  width: -moz-max-content;
+  width: max-content;
+  display: none;
+  top: 2rem;
+}
 
-  .menu-item-has-children ul li {
-    padding: 1rem;
-  }
+.main-menu .menu-item-has-children ul li {
+  padding: 1rem;
+}
 
-  .menu-item-has-children:hover ul {
-    display: block;
-  }
+.main-menu .menu-item-has-children:hover ul {
+  display: block;
+}
+
+.footer-menu-li a {
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.footer-menu-li a:hover {
+  text-decoration: underline;
 }
 
 .hover\:underline:hover {
@@ -1530,6 +1561,15 @@ video {
 @media (min-width: 768px) {
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .md\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 

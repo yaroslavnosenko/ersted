@@ -22,29 +22,36 @@ Theme Name: Ersted
   -webkit-font-smoothing: antialiased;
 }
 
-@media screen {
-  .menu-item-has-children > a::after {
-    content: " ↓";
-  }
+.main-menu .menu-item-has-children > a::after {
+  content: " ↓";
+}
 
-  .menu-item-has-children {
-    position: relative;
-  }
+.main-menu .menu-item-has-children {
+  position: relative;
+}
 
-  .menu-item-has-children ul {
-    position: absolute;
-    background: black;
-    color: white;
-    width: max-content;
-    display: none;
-    top: 2rem;
-  }
+.main-menu .menu-item-has-children ul {
+  position: absolute;
+  background: black;
+  color: white;
+  width: max-content;
+  display: none;
+  top: 2rem;
+}
 
-  .menu-item-has-children ul li {
-    padding: 1rem;
-  }
+.main-menu .menu-item-has-children ul li {
+  padding: 1rem;
+}
 
-  .menu-item-has-children:hover ul {
-    display: block;
-  }
+.main-menu .menu-item-has-children:hover ul {
+  display: block;
+}
+
+.footer-menu-li a {
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.footer-menu-li a:hover {
+  text-decoration: underline;
 }

@@ -126,23 +126,26 @@ add_action('acf/include_fields', function () {
 				'key' => 'address_field',
 				'label' => 'Address',
 				'name' => 'address',
-				'type' => 'text',
+				'type' => 'textarea',
 				'wrapper' => array(
 					'width' => '50',
 				),
-				'default_value' => 'Some address',
-				'placeholder' => 'Some address',
+				'default_value' => '136 W. Central Drive
+				South El Monte, CA 91733',
+				'placeholder' => 'Address',
+				'new_lines' => 'br',
 			),
 			array(
 				'key' => 'schedule_field',
 				'label' => 'Schedule',
 				'name' => 'schedule',
-				'type' => 'text',
+				'type' => 'textarea',
 				'wrapper' => array(
 					'width' => '50',
 				),
 				'default_value' => 'Address',
-				'placeholder' => 'Address',
+				'placeholder' => 'Schedule',
+				'new_lines' => 'br',
 			),
 			array(
 				'key' => 'google_maps_field',
