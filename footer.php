@@ -107,12 +107,15 @@
                     ?>
                 </div>
                 <div>
-                    <div class="flex gap-4 items-center">
+                    <div class="flex gap-6 items-center">
+                        <a rel="noopener noreferrer" target="_blank" href="<? the_field('facebook_field') ?>">
+                            <? get_template_part('includes/facebook-icon'); ?>
+                        </a>
                         <a rel="noopener noreferrer" target="_blank" href="<? the_field('instagram_field') ?>">
                             <? get_template_part('includes/instagram-icon'); ?>
                         </a>
-                        <a rel="noopener noreferrer" target="_blank" href="<? the_field('facebook_field') ?>">
-                            <? get_template_part('includes/facebook-icon'); ?>
+                        <a rel="noopener noreferrer" target="_blank" href="<? the_field('tiktok_field') ?>">
+                            <? get_template_part('includes/tiktok-icon'); ?>
                         </a>
                         <a href="mailto:<? the_field('email_field') ?>">
                             <span class="material-symbols-sharp">
