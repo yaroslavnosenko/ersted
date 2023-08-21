@@ -65,9 +65,9 @@ add_action('acf/include_fields', function () {
 	$front_page_location = array(
 		array(
 			array(
-				'param' => 'page_type',
+				'param' => 'options_page',
 				'operator' => '==',
-				'value' => 'front_page',
+				'value' => 'acf-options',
 			),
 		),
 	);
@@ -118,7 +118,7 @@ add_action('acf/include_fields', function () {
 				'key' => 'tiktok_field',
 				'label' => 'TikTok',
 				'name' => 'tiktok',
-				'type' => 'text',
+				'type' => 'url',
 				'default_value' => 'https://tiktok.com',
 				'placeholder' => 'https://tiktok.com/username',
 			),
@@ -427,4 +427,8 @@ function theme_breadcrumbs()
 	echo '<span> / </span>';
 	echo '<span>' . get_the_title() . '</span>';
 	echo '</div>';
+}
+
+if (function_exists('acf_add_options_page')) {
+	acf_add_options_page();
 }

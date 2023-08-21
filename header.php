@@ -30,12 +30,12 @@
 						<?php } ?>
 						<div class="text-sm hidden lg:block">
 							<p>
-								<? the_field('address_field') ?>
+								<? the_field('address_field', 'options') ?>
 							</p>
 						</div>
 						<div class="text-sm hidden lg:block">
 							<p>
-								<? the_field('schedule_field') ?>
+								<? the_field('schedule_field', 'options') ?>
 							</p>
 						</div>
 					</div>
@@ -51,26 +51,26 @@
 
 				<div class='flex gap-12 items-center justify-between mb-4 lg:mb-0'>
 					<div class="flex gap-6 items-center">
-						<a rel="noopener noreferrer" target="_blank" href="<? the_field('facebook_field') ?>">
+						<a rel="noopener noreferrer" target="_blank" href="<? the_field('facebook_field', 'options') ?>">
 							<? get_template_part('includes/facebook-icon'); ?>
 						</a>
-						<a rel="noopener noreferrer" target="_blank" href="<? the_field('instagram_field') ?>">
+						<a rel="noopener noreferrer" target="_blank" href="<? the_field('instagram_field', 'options') ?>">
 							<? get_template_part('includes/instagram-icon'); ?>
 						</a>
-						<a rel="noopener noreferrer" target="_blank" href="<? the_field('tiktok_field') ?>">
+						<a rel="noopener noreferrer" target="_blank" href="<? the_field('tiktok_field', 'options') ?>">
 							<? get_template_part('includes/tiktok-icon'); ?>
 						</a>
-						<a href="mailto:<? the_field('email_field') ?>">
+						<a href="mailto:<? the_field('email_field', 'options') ?>">
 							<span class="material-symbols-sharp">
 								stacked_email
 							</span>
 						</a>
 					</div>
-					<a href="tel:<? the_field('phone_field') ?>" class="relative px-6 py-3 font-semibold text-black group">
+					<a href="tel:<? the_field('phone_field', 'options') ?>" class="relative px-6 py-3 font-semibold text-black group">
 						<span class="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-[#aecedf] group-hover:translate-x-0 group-hover:translate-y-0"></span>
 						<span class="absolute inset-0 w-full h-full border-[3px] border-black"></span>
 						<span class="relative flex gap-4">
-							<? the_field('phone_field') ?>
+							<? the_field('phone_field', 'options') ?>
 						</span>
 					</a>
 				</div>

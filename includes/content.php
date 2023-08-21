@@ -1,6 +1,6 @@
-<article id="post-<?php the_ID(); ?>">
-    <header class="text-center">
-        <? the_title(sprintf('<h2 class="text-4xl lg:text-6xl tracking-tight font-extrabold"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
+<article class="pb-16" id="post-<?php the_ID(); ?>">
+    <header class="text-center py-16">
+        <? the_title(sprintf('<h2 class="text-4xl lg:text-6xl tracking-tight font-extrabold pb-2"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
         <? theme_breadcrumbs(); ?>
         <? if (get_post_type() !== 'page') { ?>
             <time datetime="<? the_date('c'); ?>" itemprop="datePublished" class="block"><?= get_the_date(); ?></time>
