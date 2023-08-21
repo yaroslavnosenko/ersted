@@ -1146,6 +1146,7 @@ textarea {
 }
 .submit-btn {
   margin-top: 1.5rem;
+  cursor: pointer;
   border-width: 3px;
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));

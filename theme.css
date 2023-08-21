@@ -72,7 +72,7 @@ textarea {
 }
 
 .submit-btn {
-  @apply bg-[#aecedf] border-black border-[3px] mt-6 p-4 text-center font-semibold text-black;
+  @apply bg-[#aecedf] border-black border-[3px] mt-6 p-4 text-center font-semibold text-black cursor-pointer;
 }
 
 form {
