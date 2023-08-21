@@ -96,15 +96,15 @@
 
 		<div class="order-3 lg:order-3">
 			<div class="container">
-				<?
+				<?php
 				wp_nav_menu(
 					array(
-						'container_id'    => 'secondary-menu',
+						'container_id' => 'secondary-menu',
 						'container_class' => 'main-menu hidden lg:block py-6 lg:py-0 lg:pb-2 border-t lg:border-none',
-						'menu_class'      => 'lg:flex mx-0 gap-x-6 flex-wrap justify-center',
-						'theme_location'  => 'secondary',
-						'li_class'        => 'font-semibold text-sm p-2',
-						'fallback_cb'     => false,
+						'menu_class' => 'lg:flex mx-0 gap-x-6 flex-wrap justify-center',
+						'theme_location' => 'secondary',
+						'li_class' => 'font-semibold text-sm p-2',
+						'fallback_cb' => false,
 					)
 				);
 				?>
