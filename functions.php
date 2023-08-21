@@ -1,4 +1,4 @@
-<?
+<?php
 function init_styles()
 {
 	wp_register_style(
