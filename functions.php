@@ -334,6 +334,14 @@ add_action('acf/include_fields', function () {
 				'default_value' => 'Form Subtitle',
 				'placeholder' => 'Form Subtitle',
 			),
+			array(
+				'key' => 'form_id_field',
+				'label' => 'Form ID',
+				'name' => 'form_id',
+				'type' => 'text',
+				'default_value' => '0',
+				'placeholder' => 'Form ID',
+			),
 		),
 		'location' => $front_page_location,
 	));

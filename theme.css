@@ -55,3 +55,22 @@ Theme Name: Ersted
 .footer-menu-li a:hover {
   text-decoration: underline;
 }
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  @apply border bg-gray-100 w-full p-4;
+}
+
+.contact-us .row {
+  @apply grid md:grid-cols-3 gap-4 mb-4;
+}
+
+.submit-btn {
+  @apply bg-[#aecedf] border-black border-[3px] mt-6 p-4 text-center font-semibold text-black;
+}
+
+form {
+  @apply m-0;
+}

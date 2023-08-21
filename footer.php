@@ -64,6 +64,7 @@
                     </a>
                 </div>
             </div>
+            <?php echo do_shortcode('[contact-form-7 id="' . get_field('form_id_field') . '"]'); ?>
         </div>
     </div>
 

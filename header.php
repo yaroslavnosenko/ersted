@@ -111,3 +111,9 @@
 			</div>
 		</div>
 	</header>
+
+	<div id="top" class="w-12 h-12 p-3 text-white bg-black fixed right-4 z-10 cursor-pointer transition-all bottom-4">
+		<span class="material-symbols-sharp">
+			arrow_upward
+		</span>
+	</div>
