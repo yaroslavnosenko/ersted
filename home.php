@@ -13,12 +13,12 @@ $home_url = esc_url(home_url());
         <div class="mx-auto max-w-5xl">
             <header class="mb-12">
                 <h1 class="text-4xl lg:text-6xl text-center tracking-tight font-extrabold mb-2">
-                    <?= $page_title ?>
+                    <?php echo $page_title ?>
                 </h1>
                 <div class="breadcrumb opacity-70 text-center">
-                    <a class="breadcrumb-link hover:underline" href="<?= $home_url ?>"><?= __("Home") ?></a>
+                    <a class="breadcrumb-link hover:underline" href="<?php echo $home_url ?>"><?php echo __("Home") ?></a>
                     <span> / </span>
-                    <?= $page_title ?>
+                    <?php echo $page_title ?>
                 </div>
             </header>
 
@@ -28,13 +28,13 @@ $home_url = esc_url(home_url());
                     while (have_posts()) {
                         the_post();
                 ?>
-                        <a href="<? the_permalink(); ?>">
+                        <a href="<?php the_permalink(); ?>">
                             <article>
-                                <? the_post_thumbnail('post-thumbnail', array('class' => 'aspect-video object-cover	object-center')); ?>
+                                <?php the_post_thumbnail('post-thumbnail', array('class' => 'aspect-video object-cover	object-center')); ?>
                                 <header class="mt-4 text-xl font-semibold hover:underline">
-                                    <? the_title() ?>
+                                    <?php the_title() ?>
                                 </header>
-                                <time itemprop="datePublished" datetime="<?= get_the_date('c'); ?>" class="block opacity-70 text-sm mt-2"><?= get_the_date(); ?></time>
+                                <time itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>" class="block opacity-70 text-sm mt-2"><?php echo get_the_date(); ?></time>
                             </article>
                         </a>
                 <?php

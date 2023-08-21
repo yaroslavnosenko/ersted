@@ -9,7 +9,7 @@
             <p class="text-black/60 text-xl mb-8" id="hero-subtitle">
                 <?php the_field('error_subtitle_field', 'options') ?>
             </p>
-            <a href="<?= esc_url(home_url()) ?>" class="w-full md:w-auto flex gap-3 font-semibold justify-center" id="hero-action">
+            <a href="<?php echo esc_url(home_url()) ?>" class="w-full md:w-auto flex gap-3 font-semibold justify-center" id="hero-action">
                 <span class="hover:underline">
                     <?php the_field('error_action_field', 'options') ?>
                 </span>
