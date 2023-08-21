@@ -78,7 +78,7 @@
                 <div class="prose prose-p:mb-8 prose-p:opacity-60 prose-headings:mt-0 prose-headings:mb-4 prose-headings:text-xl prose-headings:lg:text-2xl mt-8 max-w-full text-black">
                     <?php echo apply_filters('the_content', $page->post_content); ?>
                 </div>
-            <?
+            <?php
             } else {
                 echo '<h2>FAQ page not found or not published.</h2>';
             }
@@ -91,7 +91,7 @@
 <section class="py-16">
     <div class="container">
         <div class="mx-auto max-w-5xl">
-            <?
+            <?php
 
             $posts_page_id = get_option('page_for_posts');
             $page_title    = get_the_title($posts_page_id);
