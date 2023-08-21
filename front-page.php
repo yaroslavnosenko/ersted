@@ -67,9 +67,7 @@
         <div class="max-w-5xl mx-auto">
             <?php
             $page = get_field('faq_page_field', 'options');
-            if (
-                $page
-            ) {
+            if ($page) {
             ?>
                 <h2 class="text-2xl lg:text-4xl tracking-tight font-extrabold mb-2">
                     <?php echo $page->post_title ?>
