@@ -9,7 +9,7 @@
     <div class="flex justify-center">
         <?php the_post_thumbnail() ?>
     </div>
-    <div class="prose mx-auto">
+    <div class="prose mx-auto mt-16">
         <?php the_content(); ?>
     </div>
 </article>
