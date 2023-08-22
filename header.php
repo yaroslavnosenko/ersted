@@ -11,9 +11,9 @@
 <body class="bg-white">
 	<header class="sticky top-0 bg-white/90 backdrop-blur-lg z-10 flex flex-col">
 		<div class="container order-2">
-			<div class="lg:flex lg:justify-between lg:items-center">
+			<div class="lg:flex lg:justify-between lg:items-center lg:gap-6">
 				<div class="flex justify-between items-center h-20">
-					<div class="flex items-center gap-12">
+					<div class="flex items-center gap-12 lg:gap-6">
 						<?php if (has_custom_logo()) { ?>
 							<div class="w-20">
 								<?php the_custom_logo(); ?>
