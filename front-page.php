@@ -3,12 +3,12 @@
 <div class="container">
 
     <!-- HERO -->
-    <section class="max-w-2xl text-center mx-auto py-16">
-        <h1 class="text-4xl lg:text-6xl tracking-tight font-extrabold mb-8">
+    <section class="max-w-2xl mx-auto py-16">
+        <h1 class="text-4xl text-center lg:text-6xl tracking-tight font-extrabold mb-8">
             <?php the_title(); ?>
         </h1>
-        <div class="text-black/60 text-xl mb-8"><?php the_content() ?></div>
-        <a href="<?php the_field('hero_link_field', 'options') ?>" class="w-full md:w-auto flex gap-3 font-semibold justify-center">
+        <div class="text-black/60 mb-8 prose"><?php the_content() ?></div>
+        <a href="<?php the_field('hero_link_field', 'options') ?>" class="w-full md:w-auto flex gap-3 font-semibold">
             <span class="hover:underline">
                 <?php the_field('hero_action_field', 'options'); ?>
             </span>
