@@ -5,7 +5,7 @@ function init_styles()
 		'theme',
 		get_template_directory_uri() . '/style.css',
 		array(),
-		false,
+		'1.0',
 		'all'
 	);
 	wp_enqueue_style('theme');
@@ -16,8 +16,8 @@ function init_scripts()
 	wp_register_script(
 		'theme',
 		get_template_directory_uri() . '/script.js',
-		false,
-		false,
+		array(),
+		'1.0',
 		true
 	);
 	wp_enqueue_script('theme');
