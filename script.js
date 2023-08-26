@@ -27,9 +27,22 @@ const initTopButton = () => {
   });
 };
 
+const initMoreButton = () => {
+  const more_button = document.querySelector("#more-button");
+  more_button.addEventListener("click", function (e) {
+    e.preventDefault();
+    const shadow = document.querySelector("#hero-content-shadow");
+    const content = document.querySelector("#hero-content");
+    shadow.classList.add("hidden");
+    content.classList.remove("max-h-96");
+    more_button.classList.add("hidden");
+  });
+};
+
 const main = () => {
   initNavigation();
   initTopButton();
+  initMoreButton();
 };
 
 window.addEventListener("load", main);

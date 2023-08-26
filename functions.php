@@ -168,24 +168,8 @@ add_action('acf/include_fields', function () {
 				'label' => 'Hero Action',
 				'name' => 'hero_action',
 				'type' => 'text',
-				'wrapper' => array(
-					'width' => '50',
-				),
 				'default_value' => 'Learn More',
 				'placeholder' => 'Hero Action',
-			),
-			array(
-				'key' => 'hero_link_field',
-				'label' => 'Hero Link',
-				'name' => 'hero_link',
-				'type' => 'page_link',
-				'wrapper' => array(
-					'width' => '50',
-				),
-				'post_type' => array(
-					0 => 'page',
-				),
-				'allow_archives' => false,
 			),
 		),
 		'location' => $front_page_location,

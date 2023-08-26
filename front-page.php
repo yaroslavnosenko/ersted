@@ -7,15 +7,18 @@
         <h1 class="text-4xl text-center lg:text-6xl tracking-tight font-extrabold mb-8">
             <?php the_title(); ?>
         </h1>
-        <div class="text-black/60 mb-8 prose"><?php the_content() ?></div>
-        <a href="<?php the_field('hero_link_field', 'options') ?>" class="w-full md:w-auto flex gap-3 font-semibold">
+        <div id="hero-content" class="max-h-96 overflow-hidden relative">
+            <div class="text-black/60 mb-8 prose"><?php the_content() ?></div>
+            <div id="hero-content-shadow" class="absolute bottom-0 h-32 w-full bg-gradient-to-t from-white to-transparent"></div>
+        </div>
+        <button class="w-full md:w-auto flex gap-3 font-semibold mt-8" id="more-button">
             <span class="hover:underline">
                 <?php the_field('hero_action_field', 'options'); ?>
             </span>
             <span class="material-symbols-sharp">
                 trending_flat
             </span>
-        </a>
+        </button>
     </section>
 
     <!-- SERVICES -->
