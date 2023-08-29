@@ -15,9 +15,7 @@
                         <span class="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-[#aecedf] group-hover:translate-x-0 group-hover:translate-y-0"></span>
                         <span class="absolute inset-0 w-full h-full border-[3px] border-black"></span>
                         <span class="relative">
-                            <span class="material-symbols-sharp">
-                                stacked_email
-                            </span>
+                            <?php get_template_part('includes/mail-icon'); ?>
                         </span>
                     </div>
                     <p class="my-4 opacity-60">
@@ -33,9 +31,7 @@
                         <span class="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-[#aecedf] group-hover:translate-x-0 group-hover:translate-y-0"></span>
                         <span class="absolute inset-0 w-full h-full border-[3px] border-black"></span>
                         <span class="relative">
-                            <span class="material-symbols-sharp">
-                                storefront
-                            </span>
+                            <?php get_template_part('includes/store-icon'); ?>
                         </span>
                     </div>
                     <p class="my-4 opacity-60">
@@ -51,9 +47,7 @@
                         <span class="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-[#aecedf] group-hover:translate-x-0 group-hover:translate-y-0"></span>
                         <span class="absolute inset-0 w-full h-full border-[3px] border-black"></span>
                         <span class="relative">
-                            <span class="material-symbols-sharp">
-                                phone_in_talk
-                            </span>
+                            <?php get_template_part('includes/phone-icon'); ?>
                         </span>
                     </div>
                     <p class="my-4 opacity-60">
@@ -122,9 +116,7 @@
                             <?php get_template_part('includes/tiktok-icon'); ?>
                         </a>
                         <a href="mailto:<?php the_field('email_field', 'options') ?>">
-                            <span class="material-symbols-sharp">
-                                stacked_email
-                            </span>
+                            <?php get_template_part('includes/mail-icon'); ?>
                         </a>
                     </div>
                     <p class="py-4 md:py-8"><?php the_field('address_field', 'options') ?></p>

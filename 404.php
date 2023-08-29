@@ -13,9 +13,7 @@
                 <span class="hover:underline">
                     <?php the_field('error_action_field', 'options') ?>
                 </span>
-                <span class="material-symbols-sharp">
-                    trending_flat
-                </span>
+                <?php get_template_part('includes/arrow-icon'); ?>
             </a>
         </div>
     </div>

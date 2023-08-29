@@ -5,7 +5,7 @@ function init_styles()
 		'theme',
 		get_template_directory_uri() . '/style.css',
 		array(),
-		'1.0',
+		'1.1',
 		'all'
 	);
 	wp_enqueue_style('theme');
